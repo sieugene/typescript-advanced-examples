@@ -11,4 +11,6 @@ export class Calendar {
     dayFormatter?: DayFormatter,
     weekFormatter?: weekFormatter
   ): Date[];
+  monthDays(year: number,month: number): Date[]
+  monthText(year?: number, month?: number): string
 }
