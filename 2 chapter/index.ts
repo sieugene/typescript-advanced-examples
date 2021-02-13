@@ -1,0 +1,1 @@
+import './2-decorators/example-3'
