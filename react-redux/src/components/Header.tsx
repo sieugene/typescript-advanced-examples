@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 type PropsType = {
   title?: string;
@@ -6,12 +6,22 @@ type PropsType = {
 };
 
 export const Header: FC<PropsType> = ({ title }: PropsType) => {
+  const [counter, setCounter] = useState<number>(0);
   const content = typeof title === "string" ? title.toLowerCase() : null;
+  const increase = (): void => {
+    setCounter((prev) => prev + 1);
+  };
+  const decrease = (): void => {
+    setCounter((prev) => prev - 1);
+  };
   return (
-    <div>
-      <h1>header</h1>
-      {content}
-    </div>
+    <>
+      {counter}
+      <div>
+        <h1>header</h1>
+        {content}
+      </div>
+    </>
   );
 };
 
