@@ -24,6 +24,7 @@
       "arrow-body-style":"off",
       "no-use-before-define":"off",
       "comma-dangle":"off",
+      "operator-linebreak":"off",
       "linebreak-style": "off",
       "react/jsx-props-no-spreading": 0,
       "import/prefer-default-export": 0,
