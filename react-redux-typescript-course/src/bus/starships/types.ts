@@ -21,7 +21,28 @@ type StarshipsStopFetchingAction = {
 };
 
 export const STARSHIPS_FILL = "STARSHIPS_FILL";
-type StarshipsFillAction = {
+export type StarshipsFillAction = {
   type: typeof STARSHIPS_FILL;
   payload: Starships;
 };
+
+export const STARSHIPS_SET_FETCHING_ERROR = "STARSHIPS_SET_FETCHING_ERROR";
+export type StarshipsSetFetchingErrorAction = {
+  type: typeof STARSHIPS_SET_FETCHING_ERROR;
+  error: true;
+  payload: ErrorHttpAction;
+};
+
+// Async
+
+export const STARSHIPS_FETCH_ASYNC = "STARSHIPS_FETCH_ASYNC";
+type StarshipsFetchAsync = {
+  type: typeof STARSHIPS_FETCH_ASYNC;
+};
+
+export type StarshipActionTypes =
+  | StarshipsStartFetchingAction
+  | StarshipsStopFetchingAction
+  | StarshipsFillAction
+  | StarshipsSetFetchingErrorAction
+  | StarshipsFetchAsync;
