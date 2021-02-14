@@ -23,6 +23,7 @@
     "eject": "react-scripts eject",
     "lint": "yarn typescript && yarn lint:ts",
     "typescript": "tsc",
+    "prettier:ts": "prettier-eslint --list-different $PWD/'src/**/*.{ts,tsx}'; prettier-eslint --write $PWD/'src/**/*.{ts,tsx}'",
     "lint:ts": "eslint \"src/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.2.1"
+    "eslint-config-airbnb": "^18.2.1",
+    "prettier-eslint-cli": "^5.0.0"
   }
 }
