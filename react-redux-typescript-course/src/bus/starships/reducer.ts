@@ -32,11 +32,13 @@ export const starshipsReducer = (
       return {
         ...state,
         isFetching: true,
+        error: false,
       };
     case STARSHIPS_STOP_FETCHING:
       return {
         ...state,
         isFetching: false,
+        error: false,
       };
     case STARSHIPS_SET_FETCHING_ERROR:
       return {
@@ -49,6 +51,7 @@ export const starshipsReducer = (
         data: {
           ...action.payload,
         },
+        error: false,
       };
     case STARSHIPS_FETCH_ASYNC:
       return state;
