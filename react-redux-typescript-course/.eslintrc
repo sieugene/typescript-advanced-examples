@@ -23,6 +23,7 @@
       "quotes":"off",
       "arrow-body-style":"off",
       "no-use-before-define":"off",
+      "implicit-arrow-linebreak":"off",
       "comma-dangle":"off",
       "operator-linebreak":"off",
       "linebreak-style": "off",
