@@ -20,6 +20,12 @@ export const Header: FC<PropsType> = ({ title }: PropsType) => {
       <div>
         <h1>header</h1>
         {content}
+        <button type="button" onClick={increase}>
+          increase
+        </button>
+        <button type="button" onClick={decrease}>
+          decrease
+        </button>
       </div>
     </>
   );

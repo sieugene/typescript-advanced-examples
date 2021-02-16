@@ -15,7 +15,7 @@ import { makeRequestWithSpinner } from "../../../../workers";
 // API
 import { api } from "../../../../api";
 
-export function* fetchStarships() {
+export function* fetchStarships(): Generator {
   // данные для универсального воркера
   const options = {
     fetcher: api.starships.fetch,

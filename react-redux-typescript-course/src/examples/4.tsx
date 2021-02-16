@@ -8,12 +8,12 @@ export const Component4: FC<PropTypes> = ({
   onClick,
 }: PropTypes): ReactElement => {
   const onFocus = (e: FocusEvent) => {
-    console.log(e.currentTarget.id);
+    // console.log(e.currentTarget.id);
   };
   return (
     <button
       onKeyDown={(e): void => {
-        console.log(e);
+        // console.log(e);
       }}
       onClick={onClick}
       type="button"

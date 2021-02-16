@@ -24,6 +24,7 @@
       "arrow-body-style":"off",
       "no-use-before-define":"off",
       "implicit-arrow-linebreak":"off",
+      "object-curly-newline":"off",
       "comma-dangle":"off",
       "operator-linebreak":"off",
       "linebreak-style": "off",

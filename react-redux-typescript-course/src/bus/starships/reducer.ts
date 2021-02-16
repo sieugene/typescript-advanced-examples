@@ -59,6 +59,6 @@ export const starshipsReducer = (
       // проверяем используются ли все экшены
       // eslint-disable-next-line no-case-declarations
       const x: never = action;
-      return x;
+      return state;
   }
 };

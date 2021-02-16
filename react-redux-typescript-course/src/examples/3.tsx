@@ -18,5 +18,5 @@ export const Component3: FC<PropTypes> = ({
     </div>
   );
 };
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const p = <Component3 extends={{ className: "some" }}>1</Component3>;
