@@ -8,7 +8,7 @@ import Styles from "./styles.module.css";
 import observatory from "./observatory.jpg";
 import { book } from "../../routes/book";
 
-export const Bridge: FC = () => {
+export const Bridge = () => {
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.profile);
   const _proceed = () => dispatch(push(book.panel));
