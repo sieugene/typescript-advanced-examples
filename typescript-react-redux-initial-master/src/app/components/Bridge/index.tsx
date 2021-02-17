@@ -7,11 +7,13 @@ import { push } from "connected-react-router";
 import Styles from "./styles.module.css";
 import observatory from "./observatory.jpg";
 import { book } from "../../routes/book";
+// Types
+import { AppState } from "../../init/rootReducer";
 
-export const Bridge = () => {
+export const Bridge: FC = () => {
   const dispatch = useDispatch();
-  const profile = useSelector((state) => state.profile);
-  const _proceed = () => dispatch(push(book.panel));
+  const profile = useSelector((state: AppState) => state.profile);
+  const proceed = () => dispatch(push(book.panel));
 
   return (
     <section className={Styles.bridge}>
@@ -24,7 +26,7 @@ export const Bridge = () => {
         !
       </h1>
       <img src={observatory} alt="observatory" />
-      <button onClick={_proceed} type="button">
+      <button onClick={proceed} type="button">
         Контрольная панель
       </button>
     </section>
