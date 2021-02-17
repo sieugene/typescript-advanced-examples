@@ -31,7 +31,6 @@ const getValidityClassName = (
 type CustomInputProps = WrappedFieldProps & {
   type: string;
   label: string;
-  meta: WrappedFieldMetaProps;
 };
 
 export const customInput: FC<CustomInputProps> = (props) => {

@@ -3,7 +3,7 @@ export const types = {
   FILL_PROFILE: "FILL_PROFILE",
   START_FETCHING: "START_FETCHING",
   STOP_FETCHING: "STOP_FETCHING",
-} as const;
+} as const
 
 export type ProfileType = {
   firstName: string;

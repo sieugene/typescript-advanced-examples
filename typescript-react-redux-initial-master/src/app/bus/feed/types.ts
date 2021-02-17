@@ -1,5 +1,9 @@
 export type Starship = {
   name: string;
+  // eslint-disable-next-line
+  starship_class: string;
+  manufacturer: string;
+  crew: string;
 };
 export type Starships = Starship[];
 

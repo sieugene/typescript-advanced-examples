@@ -2,7 +2,7 @@
 import { compose, Middleware } from "redux";
 import { createLogger } from "redux-logger";
 import createSagaMiddleware from "redux-saga";
-import { createBrowserHistory } from "history";
+import { createBrowserHistory, History } from "history";
 import { routerMiddleware as createRouterMiddleware } from "connected-react-router";
 
 export const logger = createLogger({
@@ -22,6 +22,9 @@ export const logger = createLogger({
 const DEV = process.env.NODE_ENV === "development";
 
 const history = createBrowserHistory();
+export type HistoryType = History;
+// export type RouterRootStateHistory = RouterRootState<HistoryType>;
+// export type RouterRootStateHistory = AppState
 const sagaMiddleware = createSagaMiddleware();
 const routerMiddleware = createRouterMiddleware(history);
 const devtools = window && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;

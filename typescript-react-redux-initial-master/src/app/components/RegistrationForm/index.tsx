@@ -1,5 +1,5 @@
 // Core
-import React from "react";
+import React, { FC } from "react";
 import { Field, reduxForm, FieldArray } from "redux-form";
 import capitalize from "capitalize";
 import { customInput, discounts } from "../Fields";
@@ -12,7 +12,7 @@ import {
 } from "./validation";
 import "./styles.css";
 
-const RegistrationComponent = ({ handleSubmit }) => {
+const RegistrationComponent: FC = ({ handleSubmit }: any) => {
   return (
     <form onSubmit={handleSubmit}>
       <Field
