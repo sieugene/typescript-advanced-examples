@@ -8,7 +8,7 @@ export function* fetchStarships () {
     try {
         yield put(feedActions.startFetching());
 
-        const response = yield call(fetch, 'https://swapi.co/api/starships');
+        const response = yield call(fetch, 'https://swapi.dev/api/starships');
         
         const { results } = yield call([response, response.json]);
 
