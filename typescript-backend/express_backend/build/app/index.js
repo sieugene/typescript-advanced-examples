@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var bodyParser = require("body-parser");
+// Connection
+var connect_1 = require("./connect");
 var app = express();
 var port = 8080;
 app.use(bodyParser.json());
@@ -12,3 +14,5 @@ app.get("/", function (req, res) {
 app.listen(port, function () {
     console.log("Server was started on", port, " port");
 });
+var db = "mongodb://lab.lectrum.io:37019/express";
+connect_1.connectDB({ db: db });
