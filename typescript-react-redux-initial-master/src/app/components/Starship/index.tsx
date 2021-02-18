@@ -9,20 +9,20 @@ import Styles from "./styles.module.css";
 import { AppState } from "../../init/rootReducer";
 import { Starship as StarshipType } from "../../bus/feed/types";
 
-export const Starship = () => {
+export const Starship: FC = () => {
   const starships = useSelector((state: AppState) => state.feed.starships);
   const matchSelector = createMatchSelector<AppState, BookType>(book.starship);
   const State = useSelector((state: AppState) => state);
   const match = matchSelector(State);
 
   if (!match) {
-    return false;
+    return <div> </div>;
   }
 
   const starshipName = match.params.starship;
 
   if (!starships.length) {
-    return false;
+    return <div> </div>;
   }
 
   const starship = starships.find((starshipItem: StarshipType) => {
@@ -30,7 +30,7 @@ export const Starship = () => {
   });
 
   if (!starship) {
-    return false;
+    return <div> </div>;
   }
   // eslint-disable-next-line
   const { name, starship_class, manufacturer, crew } = starship;

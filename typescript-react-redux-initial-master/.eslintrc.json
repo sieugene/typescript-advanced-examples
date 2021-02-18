@@ -29,6 +29,7 @@
     "implicit-arrow-linebreak":"off",
     "object-curly-newline":"off",
     "comma-dangle":"off",
+    "camelcase":"off",
     "jsx-a11y/label-has-associated-control": "off",
     "operator-linebreak":"off",
     "linebreak-style": "off",
