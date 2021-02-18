@@ -1,2 +1,3 @@
 "use strict";
-console.log(1);
+Object.defineProperty(exports, "__esModule", { value: true });
+require("./app");
