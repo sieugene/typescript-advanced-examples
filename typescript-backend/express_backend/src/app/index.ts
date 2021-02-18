@@ -3,8 +3,10 @@ import { Request, Response, Application } from "express";
 import * as bodyParser from "body-parser";
 
 // Connection
-
 import { connectDB } from "./connect";
+
+// Router
+import { routes } from "./routes";
 
 const app: Application = express();
 const port = 8080;
@@ -22,3 +24,5 @@ app.listen(port, () => {
 
 const db = "mongodb://lab.lectrum.io:37019/express";
 connectDB({ db });
+
+routes({ app });
