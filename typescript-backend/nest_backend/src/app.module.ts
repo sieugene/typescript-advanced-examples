@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MongooseModule } from '@nestjs/mongoose';
 
+// Domains
+import { CatsModule } from './cats/cats.module';
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    MongooseModule.forRoot('mongodb://lab.lectrum.io:37019/cats'),
+    CatsModule,
+  ],
 })
 export class AppModule {}
