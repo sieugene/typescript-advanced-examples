@@ -6,7 +6,10 @@ type OptionsType = {
 
 export const connectDB = ({ db }: OptionsType): void => {
   const connectFN = () => {
-    connect(db)
+    connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
       .then(() => {
         return console.info(`Successfully connected to ${db}`);
       })

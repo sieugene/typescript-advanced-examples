@@ -36,25 +36,25 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.routes = void 0;
-// Controllers
-var user_controller_1 = require("./../controllers/user.controller");
-var routes = function (_a) {
-    var app = _a.app;
-    app.post("/api/user", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-        var user;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, user_controller_1.UserController.createUser({
-                        firstName: req.body.firstName,
-                        lastName: req.body.lastName,
-                        email: req.body.email,
+exports.UserController = void 0;
+var user_model_1 = require("./../models/user.model");
+exports.UserController = {
+    createUser: function (_a) {
+        var email = _a.email, firstName = _a.firstName, lastName = _a.lastName;
+        return __awaiter(void 0, void 0, void 0, function () {
+            return __generator(this, function (_b) {
+                return [2 /*return*/, user_model_1.UserModel.create({
+                        email: email,
+                        firstName: firstName,
+                        lastName: lastName,
+                    })
+                        .then(function (data) {
+                        return data;
+                    })
+                        .catch(function (err) {
+                        throw err;
                     })];
-                case 1:
-                    user = _a.sent();
-                    return [2 /*return*/, res.send(user)];
-            }
+            });
         });
-    }); });
+    },
 };
-exports.routes = routes;

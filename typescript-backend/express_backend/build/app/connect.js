@@ -5,7 +5,10 @@ var mongoose_1 = require("mongoose");
 var connectDB = function (_a) {
     var db = _a.db;
     var connectFN = function () {
-        mongoose_1.connect(db)
+        mongoose_1.connect(db, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        })
             .then(function () {
             return console.info("Successfully connected to " + db);
         })
