@@ -1,6 +1,6 @@
 # typescript-advanced-examples
 
-A repository for self-learning and deeper learning of typescript. It is divided into modules of regular typescript, typescript frontend [React], typescript backend [Test, Express]. Also includes custom customization of prettier, eslint
+A repository for self-learning and deeper learning of typescript. It is divided into modules of regular typescript, typescript frontend [React], typescript backend [NEST, Express]. Also includes custom customization of prettier, eslint
 
 | Folders | Lesson/Homework |
 | ------ | ------ |
